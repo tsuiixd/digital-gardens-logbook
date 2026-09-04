@@ -16,7 +16,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 📄 **[Product Requirements Document (PRD)](./docs/prd.md)** - Visão geral, atores e histórias de usuário.
 
-🛠️ **[Especificação Técnica (Tech Spec)](./docs/spec.md)** - Arquitetura técnica e estrutura do projeto.
+🛠️ **[Especificação Técnica (Tech Spec)](./docs/architecture.md)** - Arquitetura técnica e estrutura do projeto.
 
 🌐 **Site em Produção** - GitHub Pages  
 **Pendente**
