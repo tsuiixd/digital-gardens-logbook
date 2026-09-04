@@ -1,5 +1,3 @@
-Sim, entendi. Você quer **exatamente o mesmo conteúdo e estrutura do primeiro `spec.md` que fiz**, apenas com a formatação Markdown correta (`#`, `##`, listas, blocos de código etc.) para você copiar e colar diretamente no GitHub.
-
 # 🛠️ Especificação Técnica (Tech Spec) - Digital Gardens Logbook
 
 Este documento descreve o modelo de dados da aplicação **Digital Gardens Logbook**, responsável pelo gerenciamento de usuários e anotações.
