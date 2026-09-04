@@ -1,19 +1,24 @@
-🛠️ Especificação Técnica (Tech Spec) - Digital Gardens Logbook
+Sim, entendi. Você quer **exatamente o mesmo conteúdo e estrutura do primeiro `spec.md` que fiz**, apenas com a formatação Markdown correta (`#`, `##`, listas, blocos de código etc.) para você copiar e colar diretamente no GitHub.
 
-Este documento descreve o modelo de dados da aplicação Digital Gardens Logbook, responsável pelo gerenciamento de usuários, anotações pessoais e publicações compartilhadas na Área de Convivência.
+# 🛠️ Especificação Técnica (Tech Spec) - Digital Gardens Logbook
 
-O sistema permitirá que cada usuário possua sua própria conta e crie anotações contendo data, título, conteúdo e configuração de privacidade. As anotações poderão ser mantidas privadas ou compartilhadas publicamente com outros usuários através da Área de Convivência.
+Este documento descreve o modelo de dados da aplicação **Digital Gardens Logbook**, responsável pelo gerenciamento de usuários e anotações.
 
-1. Modelo de Dados (Diagrama ER)
+As anotações dos usuários serão armazenadas contendo informações como data, título, conteúdo e configuração de privacidade. Cada anotação estará relacionada ao usuário responsável por sua criação e poderá ser mantida privada ou compartilhada na **Área de Convivência**.
 
-Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura do Digital Gardens Logbook.
+---
 
+## 1. Modelo de Dados (Diagrama ER)
+
+Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura do **Digital Gardens Logbook**.
+
+```mermaid
 erDiagram
     USUARIO ||--o{ ANOTACAO : "possui"
 
     USUARIO {
         integer id PK "Identificador único do usuário"
-        string nome "Nome ou apelido do usuário"
+        string nome "Nome do usuário"
         string email "Endereço de e-mail"
         string senha "Credencial de acesso"
     }
@@ -26,34 +31,41 @@ erDiagram
         string conteudo "Conteúdo da anotação"
         string privacidade "Status de privacidade"
     }
-2. Dicionário de Dados
-Usuário
+```
 
-Responsável por armazenar os dados necessários para identificação e autenticação dos usuários do sistema.
+---
 
-id: Identificador único do usuário.
-nome: Nome ou apelido utilizado pelo usuário.
-email: Endereço de e-mail utilizado para identificação e login.
-senha: Credencial utilizada para autenticação do usuário.
+## 2. Dicionário de Dados
 
-O sistema permitirá que um visitante realize seu cadastro e, posteriormente, utilize suas credenciais para acessar as funcionalidades privadas da plataforma.
+### **Usuário**
 
-Anotação
+Responsável por armazenar os dados necessários para a autenticação e identificação dos usuários do sistema.
+
+* **id:** Identificador único do usuário.
+* **nome:** Nome do usuário, podendo ser seu nome real ou um apelido.
+* **email:** Endereço de e-mail utilizado para identificação e login.
+* **senha:** Credencial utilizada para autenticação do usuário.
+
+---
+
+### **Anotação**
 
 Responsável por representar um registro criado por um usuário no diário digital.
 
-Cada anotação será vinculada ao usuário que a criou e poderá ser mantida privada ou compartilhada na Área de Convivência.
+As anotações serão armazenadas relacionadas ao usuário que as criou. O sistema permitirá definir se cada anotação será privada ou pública.
 
-id: Identificador único da anotação.
-usuarioId: Identificador do usuário responsável pela anotação.
-data: Data em que a anotação foi registrada.
-titulo: Título utilizado para identificar a anotação.
-conteudo: Texto contendo os pensamentos, experiências ou acontecimentos registrados.
-privacidade: Define se a anotação é privada ou pública.
-Exemplo
+* **id:** Identificador único da anotação no sistema.
+* **usuarioId:** Identificador do usuário responsável pela anotação.
+* **data:** Data em que a anotação foi registrada.
+* **titulo:** Título da anotação.
+* **conteudo:** Conteúdo escrito pelo usuário.
+* **privacidade:** Define se a anotação será privada ou pública.
+
+#### Exemplo
 
 Uma anotação cadastrada no sistema poderá possuir os seguintes dados:
 
+```json
 {
     "id": "1",
     "usuarioId": "5",
@@ -62,50 +74,63 @@ Uma anotação cadastrada no sistema poderá possuir os seguintes dados:
     "conteudo": "Hoje foi um dia importante para mim...",
     "privacidade": "publica"
 }
+```
 
-Quando a anotação possuir o status privada, ela ficará disponível somente para o próprio usuário.
+Quando a anotação for definida como **privada**, ela ficará disponível somente para o próprio usuário.
 
-Quando possuir o status publica, ela poderá ser exibida na Área de Convivência, permitindo que outros usuários visualizem o título, conteúdo, autor e data da publicação.
+Quando for definida como **pública**, poderá ser exibida na **Área de Convivência**, permitindo que outros usuários visualizem o texto compartilhado.
 
-3. Regras de Dados
+---
 
-O relacionamento entre as entidades será definido da seguinte maneira:
+## 3. Regras de Privacidade
 
-Um usuário pode possuir várias anotações.
-Cada anotação pertence a um único usuário.
-Uma anotação pode possuir apenas um status de privacidade por vez.
-Anotações privadas não devem aparecer na Área de Convivência.
-Anotações públicas podem ser visualizadas por outros usuários.
-O autor pode alterar posteriormente a privacidade de uma anotação.
+As anotações poderão possuir os seguintes estados:
+
+* **privada:** a anotação poderá ser visualizada somente pelo próprio usuário;
+* **publica:** a anotação poderá ser visualizada por outros usuários através da Área de Convivência.
+
+O usuário poderá alterar posteriormente o status de privacidade de suas anotações.
+
 Quando uma anotação pública for alterada para privada, ela deverá deixar de aparecer na Área de Convivência.
-4. Funcionalidades Relacionadas aos Dados
+
+---
+
+## 4. Funcionalidades Relacionadas aos Dados
 
 O sistema deverá permitir:
 
-Cadastro de novos usuários;
-Login e controle de acesso;
-Criação de anotações;
-Visualização das próprias anotações;
-Visualização de uma anotação específica;
-Edição de anotações;
-Exclusão de anotações;
-Definição de anotações como públicas ou privadas;
-Alteração da privacidade das anotações;
-Publicação de anotações na Área de Convivência;
-Visualização das publicações compartilhadas por outros usuários.
-5. Versões das Tecnologias
-HTML5
-CSS3
-JavaScript
-Bootstrap
-jQuery
-Node.js
-NPM
-Git
-GitHub
-Tecnologias ainda não definidas
-Back-end: a definir.
-Banco de dados: a definir.
-API fake: a definir.
-API pública: a definir.
-Plugin jQuery: a definir.
+* Cadastro de novos usuários;
+* Login e controle de acesso;
+* Criação de anotações pessoais;
+* Registro de data, título e conteúdo;
+* Visualização das próprias anotações;
+* Visualização de uma anotação específica;
+* Edição de anotações;
+* Exclusão de anotações;
+* Definição de anotações como públicas ou privadas;
+* Alteração da privacidade das anotações;
+* Compartilhamento de anotações na Área de Convivência;
+* Visualização das publicações de outros usuários.
+
+---
+
+## 5. Versões das Tecnologias
+
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **Bootstrap**
+* **jQuery**
+* **Node.js**
+* **NPM**
+* **Git**
+* **GitHub**
+* **Stitch**
+
+### Tecnologias ainda não definidas
+
+* **Back-end:** a definir.
+* **Banco de dados:** a definir.
+* **API fake:** a definir.
+* **API pública:** a definir.
+* **Plugin jQuery:** a definir.
