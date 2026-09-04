@@ -14,15 +14,9 @@ O projeto foi pensado para proporcionar um espaço simples e agradável para **e
 
 Para entender as regras de negócio, o escopo e a arquitetura técnica da aplicação, consulte os documentos abaixo:
 
-📄 **Product Requirements Document (PRD)** - Visão geral, atores e histórias de usuário.
+📄 **[Product Requirements Document (PRD)](./docs/prd.md)** - Visão geral, atores e histórias de usuário.
 
-🛠️ **Especificação Técnica (Tech Spec)** - Arquitetura técnica e estrutura do projeto.
-
-🎨 **Design**
-
-🖼️ **Protótipo no Stitch** - Protótipo das telas e fluxo de navegação da aplicação.
-
-🎨 **Design System** - Identidade visual, cores, tipografia e padrões de componentes.
+🛠️ **[Especificação Técnica (Tech Spec)]** - Arquitetura técnica e estrutura do projeto.
 
 🌐 **Site em Produção** - GitHub Pages  
 **Pendente**
