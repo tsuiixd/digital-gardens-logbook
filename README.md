@@ -21,6 +21,8 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 🌐 **Site em Produção** - GitHub Pages  
 **Pendente**
 
+🎨 **[Design (Protótipo da página](https://stitch.withgoogle.com/projects/16391617503745330697)** - Telas interativas da aplicação.
+
 ## 💻 Tecnologias e Dependências
 
 **Framework CSS - Bootstrap:** O Bootstrap será utilizado como framework CSS para a construção da interface, oferecendo responsividade, componentes prontos, suporte a interações com JavaScript e uma estrutura consistente para o desenvolvimento das páginas.
