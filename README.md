@@ -18,10 +18,10 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 🛠️ **[Especificação Técnica (Tech Spec)](./docs/architecture.md)** - Arquitetura técnica e estrutura do projeto.
 
+🎨 **[Design (Protótipo da página](https://stitch.withgoogle.com/projects/16391617503745330697)** - Telas interativas da aplicação.
+
 🌐 **Site em Produção** - GitHub Pages  
 **Pendente**
-
-🎨 **[Design (Protótipo da página](https://stitch.withgoogle.com/projects/16391617503745330697)** - Telas interativas da aplicação.
 
 ## 💻 Tecnologias e Dependências
 
