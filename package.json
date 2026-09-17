@@ -1,0 +1,31 @@
+{
+  "name": "digital-gardens-logbook",
+  "version": "1.0.0",
+  "description": "Sistema web desenvolvido para funcionar como um **diário de bordo digital**, permitindo que cada usuário registre pensamentos, experiências, acontecimentos e reflexões por meio de anotações pessoais.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuiixd/digital-gardens-logbook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tsuiixd/digital-gardens-logbook/issues"
+  },
+  "homepage": "https://github.com/tsuiixd/digital-gardens-logbook#readme",
+  "dependencies": {
+    "jquery": "^4.0.0",
+    "uuid": "^14.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
