@@ -29,6 +29,8 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 **Stitch:** Utilizado para a criação do protótipo e esboço das interfaces da aplicação, permitindo visualizar as principais telas e fluxos antes da implementação.
 
+**API Pública** — Quotable API: Utilizada para exibir frases inspiracionais na página inicial, incentivando o usuário a escrever. Escolhida por ser gratuita, sem autenticação e com endpoint simples.
+
 ---
 
 # 📖 Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
