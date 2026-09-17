@@ -130,5 +130,4 @@ O sistema deverá permitir:
 * **Back-end:** a definir.
 * **Banco de dados:** a definir.
 * **API fake:** a definir.
-* **API pública:** a definir.
 * **Plugin jQuery:** a definir.
