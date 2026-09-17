@@ -117,7 +117,7 @@ O sistema deverá permitir:
 * **HTML5**
 * **CSS3**
 * **JavaScript**
-* **Bootstrap**
+* **Bootstrap v5.3.8**
 * **jQuery**
 * **Node.js**
 * **NPM**
