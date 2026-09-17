@@ -25,11 +25,11 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 ## 💻 Tecnologias e Dependências
 
-**Framework CSS - Bootstrap:** O Bootstrap será utilizado como framework CSS para a construção da interface, oferecendo responsividade, componentes prontos, suporte a interações com JavaScript e uma estrutura consistente para o desenvolvimento das páginas.
+**Framework CSS - Bootstrap v5.3.8:** escolhido pelo sistema de grid de 12 colunas com breakpoints prontos, que atende diretamente ao requisito de layout responsivo mobile e desktop. Traz os componentes já previstos no protótipo (navbar, cards, formulários e modais) e inclui o JavaScript dos componentes interativos no próprio bundle, sem depender de bibliotecas externas como o jQuery. O repositório oficial é ativo e mantido, e a licença MIT é compatível com projetos de código aberto.
 
 **Stitch:** Utilizado para a criação do protótipo e esboço das interfaces da aplicação, permitindo visualizar as principais telas e fluxos antes da implementação.
 
-**API Pública** — Quotable API: Utilizada para exibir frases inspiracionais na página inicial, incentivando o usuário a escrever. Escolhida por ser gratuita, sem autenticação e com endpoint simples.
+**API Pública — Open-Meteo:** utilizada para buscar as condições climáticas do dia e associá-las às anotações do usuário, enriquecendo cada registro com o contexto do momento em que foi escrito. Foi escolhida por ser gratuita e não exigir chave de autenticação, o que simplifica o consumo no front-end; por ter CORS habilitado, permitindo requisições diretas do navegador sem proxy; e por ser um serviço ativo, com documentação clara e histórico de disponibilidade confiável.
 
 ---
 
